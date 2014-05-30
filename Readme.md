@@ -1,7 +1,9 @@
 
 # on-resize
 
-  listen for size changes on elements without polling
+  Listen for size changes on elements without polling. 
+
+  The technique is originally from: http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
 
 ## Installation
 
@@ -11,7 +13,17 @@
 
 ## API
 
+### `Resize(el, fn)`
 
+Listen for size changes on `el` and call `fn`.
+
+### `Resize#unbind()`
+
+Stop listening for changes on `el`.
+
+## TODO
+
+* Doesn't work for self-closing elements. Poll on those?
 
 ## License
 
