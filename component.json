@@ -1,0 +1,25 @@
+{
+  "name": "on-resize",
+  "repo": "component/on-resize",
+  "description": "listen for size changes on elements without polling",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/event": "*",
+    "component/raf": "*",
+    "component/domify": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "templates": [
+    "template.html"
+  ],
+  "styles": [
+    "on-resize.css"
+  ]
+}

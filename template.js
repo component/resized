@@ -1,0 +1,1 @@
+module.exports = '<div class="resize-triggers">\n  <div><div></div></div>\n  <div class="contract-trigger"></div>\n</div>\n';
