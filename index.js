@@ -2,10 +2,10 @@
  * Module Dependencies
  */
 
+var computed = window.getComputedStyle;
+var domify = require('domify');
 var event = require('event');
 var raf = require('raf');
-var domify = require('domify');
-var computed = window.getComputedStyle;
 
 /**
  * Template
