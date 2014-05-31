@@ -14,17 +14,17 @@ var raf = require('raf');
 var tpl = domify(require('./template'));
 
 /**
- * Export `Resize`
+ * Export `Resized`
  */
 
-module.exports = Resize;
+module.exports = Resized;
 
 /**
- * Initialize `Resize`
+ * Initialize `Resized`
  */
 
-function Resize(parent, fn) {
-  if (!(this instanceof Resize)) return new Resize(parent, fn);
+function Resized(parent, fn) {
+  if (!(this instanceof Resized)) return new Resized(parent, fn);
   this.parent = parent;
   this.fn = fn || function() {};
 
@@ -60,11 +60,11 @@ function Resize(parent, fn) {
 /**
  * Unbind the resize event handlers
  *
- * @return {Resize}
+ * @return {Resized}
  * @api public
  */
 
-Resize.prototype.unbind = function() {
+Resized.prototype.unbind = function() {
   event.unbind(this.parent, 'scroll', this.onscroll, true);
   return this;
 };
@@ -72,11 +72,11 @@ Resize.prototype.unbind = function() {
 /**
  * Reset the triggers
  *
- * @return {Resize} self
+ * @return {Resized} self
  * @api private
  */
 
-Resize.prototype.reset = function() {
+Resized.prototype.reset = function() {
   var expandChild = this.expandChild;
   var contract = this.contract;
   var expand = this.expand;
@@ -98,7 +98,7 @@ Resize.prototype.reset = function() {
  * @api private
  */
 
-Resize.prototype.check = function() {
+Resized.prototype.check = function() {
   var prev = this.prev;
   var parent = this.parent;
 
@@ -110,11 +110,11 @@ Resize.prototype.check = function() {
  * Scroll event
  *
  * @param {Event} e
- * @return {Resize}
+ * @return {Resized}
  * @api private
  */
 
-Resize.prototype.scroll = function(e) {
+Resized.prototype.scroll = function(e) {
   var self = this;
   this.reset();
   this.raf && raf.cancel(this.raf);
@@ -125,11 +125,11 @@ Resize.prototype.scroll = function(e) {
  * Trigger the resize `fn`
  *
  * @param {Event} e
- * @return {Resize}
+ * @return {Resized}
  * @api private
  */
 
-Resize.prototype.trigger = function(e) {
+Resized.prototype.trigger = function(e) {
   if (!this.check()) return this;
   var parent = this.parent;
   this.prev.width = parent.offsetWidth;

@@ -1,5 +1,5 @@
 
-build: components index.js on-resize.css template.js
+build: components index.js resized.css template.js
 	@component build --dev
 
 template.js: template.html

@@ -1,6 +1,6 @@
 {
-  "name": "on-resize",
-  "repo": "component/on-resize",
+  "name": "resized",
+  "repo": "component/resized",
   "description": "listen for size changes on elements without polling",
   "version": "0.0.1",
   "keywords": [],
@@ -20,6 +20,6 @@
     "template.html"
   ],
   "styles": [
-    "on-resize.css"
+    "resized.css"
   ]
 }
