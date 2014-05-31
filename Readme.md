@@ -1,5 +1,5 @@
 
-# on-resize
+# resized
 
   Listen for size changes on elements without polling. 
 
@@ -9,15 +9,15 @@
 
   Install with [component(1)](http://component.io):
 
-    $ component install component/on-resize
+    $ component install component/resized
 
 ## API
 
-### `Resize(el, fn)`
+### `Resized(el, fn)`
 
 Listen for size changes on `el` and call `fn`.
 
-### `Resize#unbind()`
+### `Resized#unbind()`
 
 Stop listening for changes on `el`.
 
